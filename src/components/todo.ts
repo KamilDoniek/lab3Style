@@ -135,7 +135,22 @@ export const TodoBulmaTheme: TodoThemeSchema = {
   footer_addButton: 'button is-link',
   hidden: 'is-hidden'
 }
-
+export const TodoFoundationTheme: TodoThemeSchema = {
+  root: 'flex-container grid-y',
+  list:  'flex-child-grow padding-1',
+  list_item: 'tabs-content grid-x align-center align-middle has-background-white padding-1 is-radius',
+  list_itemDone: '',
+  list_item_check: 'cell small-1 input-group-field margin-right-1',
+  list_item_text: 'cell small-5 margin-right-1',
+  list_item_textDone: 'has-line-through',
+  list_item_textEditInput: 'input-group-field margin-right-3',
+  list_item_deleteButton: 'cell small-2 button alert margin-bottom-0',
+  list_item_editButton: 'cell small-2 button warning margin-left-1 margin-bottom-0',
+  footer: 'grid-x padding-1',
+  footer_input: 'small-9 input-group-field margin-right-1',
+  footer_addButton: 'button primary margin-bottom-0',
+  hidden: 'hide'
+}
 
 interface TodoOptions {
   theme: TodoThemeSchema
