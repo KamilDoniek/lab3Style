@@ -119,7 +119,22 @@ export const TodoBoostrapTheme: TodoThemeSchema = {
   footer_addButton: 'btn btn-primary',
   hidden: 'd-none'
 }
-
+export const TodoBulmaTheme: TodoThemeSchema = {
+  root: 'is-flex is-flex-direction-column',
+  list: 'list is-flex-grow-1 p-2',
+  list_item: 'box is-flex is-align-items-center has-background-white has-text-black-bis',
+  list_itemDone: '',
+  list_item_check: 'checkbox mr-3',
+  list_item_text: 'is-flex-grow-1 mr-3',
+  list_item_textDone: 'has-line-through',
+  list_item_textEditInput: 'control input mr-3 has-background-white',
+  list_item_deleteButton: 'button is-danger has-text-white',
+  list_item_editButton: 'button is-warning ml-2',
+  footer: 'is-flex p-2',
+  footer_input: 'control input has-background-white has-text-black-bis mr-2',
+  footer_addButton: 'button is-link',
+  hidden: 'is-hidden'
+}
 
 
 interface TodoOptions {
