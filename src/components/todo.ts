@@ -39,9 +39,23 @@ export class TodoComponent {
 
     const itemEl = document.createElement('li')
     itemEl.classList.add(...classUnify(this.#theme?.list_item ?? 'todo-item'));
+    const  checkEl = document.createElement('input');
+    checkEl.type = 'checkbox';
+    const labelEl = document.createElement('label');
 
-    const checkEl = document.createElement('input');
-    checkEl.type = 'checkbox'
+    // Materialize need span and label in checkbox
+  if (this.#theme?.list_item_check?.includes("filled-in")) {
+      labelEl.classList.add(...classUnify(this.#theme.labelMaterialize ?? ""));
+      const spanEl = document.createElement('span'); 
+
+      itemEl.appendChild(labelEl);
+      labelEl.appendChild(checkEl);
+      labelEl.appendChild(spanEl);
+    } else {
+      itemEl.appendChild(checkEl);
+    }
+
+
     checkEl.addEventListener('change', () => {
       const itemDoneClass = this.#theme?.list_itemDone ?? 'todo-item-done'
       if (itemDoneClass) itemEl.classList.toggle(itemDoneClass);
@@ -74,6 +88,8 @@ export class TodoComponent {
         textEditEl.value = textEl.textContent ?? "";
         textEditEl.classList.add(...classUnify(this.#theme?.list_item_textEditInput ?? ''))
         checkEl.after(textEditEl);
+        this.#theme?.list_item_check?.includes("filled-in") && labelEl.after(textEditEl);
+        
         textEl.classList.add(...classUnify(this.#theme?.hidden ?? 'hidded'));
         deleteButton.disabled = true;
         editButton.dataset.mode = "editing";
@@ -88,7 +104,6 @@ export class TodoComponent {
       }
     });
 
-    itemEl.appendChild(checkEl)
     itemEl.appendChild(textEl)
     itemEl.appendChild(deleteButton)
     itemEl.appendChild(editButton)
@@ -151,7 +166,23 @@ export const TodoFoundationTheme: TodoThemeSchema = {
   footer_addButton: 'button primary margin-bottom-0',
   hidden: 'hide'
 }
-
+export const TodoMaterializeTheme: TodoThemeSchema = {
+  root: 'container',
+  list: 'collection row',
+  list_item: 'row s12 m4 collection-item',
+  list_itemDone: '',
+  list_item_check: 'filled-in',
+  list_item_text: 'col s4 m4',
+  labelMaterialize:'col s3 m4',
+  list_item_textDone: 'line-through',
+  list_item_textEditInput: '',
+  list_item_deleteButton: 'btn col s2 red darken-2 mr',
+  list_item_editButton: 'btn col s2 text-black orange lighten-2',
+  footer: 'footerForm row container',
+  footer_input: 'col s3 white mr',
+  footer_addButton: 'btn FooterBtn blue darken-2', 
+  hidden: ''
+}
 interface TodoOptions {
   theme: TodoThemeSchema
 }
@@ -170,5 +201,6 @@ interface TodoThemeSchema {
   footer?: string,
   footer_input?: string,
   footer_addButton?: string,
-  hidden?: string
+  hidden?: string,
+  labelMaterialize?:string
 }

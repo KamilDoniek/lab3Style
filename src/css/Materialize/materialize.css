@@ -1,0 +1,15 @@
+.footerForm {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.FooterBtn{
+    width: 100px !important;
+}
+.mr{
+    margin-right: 5px;
+}
+.line-through {
+    text-decoration: line-through;
+  }
