@@ -183,6 +183,22 @@ export const TodoMaterializeTheme: TodoThemeSchema = {
   footer_addButton: 'btn FooterBtn blue darken-2', 
   hidden: ''
 }
+export const TodoTailwindcssTheme: TodoThemeSchema = {
+  root: "flex flex-col justify-center items-center p-4", 
+  list: "w-full grow",
+  list_item: "flex items-center bg-white p-3 rounded-lg shadow-md border border-gray-200",
+  list_itemDone: "",
+  list_item_check: "mr-2 h-5 w-5",
+  list_item_text: "grow",
+  list_item_textDone: "line-through",
+  list_item_textEditInput: "grow p-2 rounded-lg",
+  list_item_deleteButton: "ml-2 px-4 py-2 bg-red-500 text-white rounded-lg",
+  list_item_editButton: "ml-2 px-4 py-2 bg-yellow-500 text-black rounded-lg",
+  footer: "flex w-full",
+  footer_input: "grow p-3 bg-white rounded-lg mr-2",
+  footer_addButton: "px-5 py-3 bg-blue-500 text-white rounded-lg",
+  hidden: "hidden",
+};
 interface TodoOptions {
   theme: TodoThemeSchema
 }
