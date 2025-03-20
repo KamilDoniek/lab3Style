@@ -8,7 +8,7 @@ todoWrapper.setAttribute('id', 'my-list');
 appEl?.appendChild(todoWrapper);
 
 const todo = new TodoComponent({
-    theme: TodoMaterializeTheme
+    theme: TodoBulmaTheme
 });
 
 todo.mount(todoWrapper)
