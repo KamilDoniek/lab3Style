@@ -167,22 +167,22 @@ export const TodoFoundationTheme: TodoThemeSchema = {
   hidden: 'hide'
 }
 export const TodoMaterializeTheme: TodoThemeSchema = {
-  root: 'container',
-  list: 'collection row',
-  list_item: 'row s12 m4 collection-item',
-  list_itemDone: '',
-  list_item_check: 'filled-in',
-  list_item_text: 'col s4 m4',
-  labelMaterialize:'col s3 m4',
-  list_item_textDone: 'line-through',
-  list_item_textEditInput: '',
-  list_item_deleteButton: 'btn col s2 red darken-2 mr',
-  list_item_editButton: 'btn col s2 text-black orange lighten-2',
-  footer: 'footerForm row container',
-  footer_input: 'col s3 white mr',
-  footer_addButton: 'btn FooterBtn blue darken-2', 
-  hidden: ''
-}
+  root: "container add-flex",
+  list: "collection add-grow centermargin",  
+  list_item: "collection-item row", 
+  list_itemDone: "line-through",
+  list_item_check: "col s1 filled-in", 
+  labelMaterialize: "col s1", 
+  list_item_text: "col s4",
+  list_item_textDone: "line-through",
+  list_item_textEditInput: "col s4",
+  list_item_deleteButton: "col s3 btn red darken-2 mr", 
+  list_item_editButton: "col s3 btn orange lighten-2",
+  footer: "container add-flex-row",
+  footer_input: "add-grow mr white inputFooter",
+  footer_addButton: "btn blue darken-2",
+  hidden: "hide",
+};
 export const TodoTailwindcssTheme: TodoThemeSchema = {
   root: "flex flex-col justify-center items-center p-4", 
   list: "w-full grow",

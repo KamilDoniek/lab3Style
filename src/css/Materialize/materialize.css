@@ -1,15 +1,32 @@
-.footerForm {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
-.FooterBtn{
-    width: 100px !important;
-}
 .mr{
     margin-right: 5px;
 }
-.line-through {
+.line-through{
     text-decoration: line-through;
   }
+
+.add-flex{
+    display: flex;
+    flex-direction: column;
+}
+.add-flex-row{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+.add-grow{
+    flex-grow:1 ;
+}
+
+.centermargin{
+    margin: 5px 10px;
+    border:0;
+}
+.btn,.collection-item{
+    border-radius: 5px;
+}
+
+.inputFooter{
+    border: white;
+    border-radius: 5px;
+}
