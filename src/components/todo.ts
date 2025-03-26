@@ -157,7 +157,7 @@ export const TodoFoundationTheme: TodoThemeSchema = {
   list_itemDone: '',
   list_item_check: 'cell small-1 input-group-field margin-right-1',
   list_item_text: 'cell small-5 margin-right-1',
-  list_item_textDone: 'has-line-through',
+  list_item_textDone: 'line-through',
   list_item_textEditInput: 'input-group-field margin-right-3',
   list_item_deleteButton: 'cell small-2 button alert margin-bottom-0',
   list_item_editButton: 'cell small-2 button warning margin-left-1 margin-bottom-0',
